@@ -109,7 +109,7 @@
 
         layer_3 {
             bindings = <
-&kp LC(LA(DELETE))  &trans              &kp LC(LS(TAB))         &kp LC(TAB)              &trans                                              &trans  &trans          &kp UP_ARROW    &trans           &trans
+&kp LC(LA(DELETE))  &kp LC(W)           &kp LC(LS(TAB))         &kp LC(TAB)              &kp LC(T)                                           &trans  &trans          &kp UP_ARROW    &trans           &trans
 &trans              &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)     &kp LC(LG(LEFT_ARROW))   &kp LC(LG(RIGHT_ARROW))                     &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans              &trans              &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans                   &kp PRINTSCREEN    &trans  &trans  &trans          &trans          &trans           &trans
 &trans              &trans              &trans                  &trans                   &trans                   &trans             &trans  &trans                                                   &trans
