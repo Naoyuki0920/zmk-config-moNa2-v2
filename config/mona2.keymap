@@ -42,6 +42,41 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        bt_sel_0_mac: bt_sel_0_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 7>;
+            label = "BT_SEL_0_MAC";
+        };
+
+        bt_sel_1_win: bt_sel_1_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 0>;
+            label = "BT_SEL_1_WIN";
+        };
+
+        bt_sel_2_win: bt_sel_2_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 0>;
+            label = "BT_SEL_2_WIN";
+        };
+
+        bt_sel_3_win: bt_sel_3_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &to 0>;
+            label = "BT_SEL_3_WIN";
+        };
+
+        bt_sel_4_win: bt_sel_4_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 0>;
+            label = "BT_SEL_4_WIN";
+        };
     };
 
     behaviors {
@@ -120,7 +155,7 @@
 
         layer_4 {
             bindings = <
-&trans          &trans  &trans  &trans  &trans                         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+&trans          &trans  &trans  &trans  &trans                         &bt_sel_0_mac  &bt_sel_1_win  &bt_sel_2_win  &bt_sel_3_win  &bt_sel_4_win
 &trans          &trans  &trans  &trans  &trans            &trans       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
 &trans          &trans  &trans  &trans  &trans  &trans    &bootloader  &trans         &trans         &trans         &trans         &bt BT_CLR
 &studio_unlock  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                      &bt BT_CLR_ALL
@@ -141,6 +176,17 @@
         };
 
         SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        mac_default_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
