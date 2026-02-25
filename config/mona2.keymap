@@ -81,6 +81,22 @@
 
             tap-ms = <20>;
         };
+
+        scroll_up_down_mac: mouse_wheel_up_down_mac {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+        };
+
+        scroll_right_left_mac: mouse_wheel_right_left_mac {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -149,7 +165,7 @@
 &mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_ALT LEFT_ALT  &mt LEFT_COMMAND LEFT_COMMAND  &lt 6 LANG1  &lt 7 LANG2  &lt 8 SPACE    &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down_mac>;
         };
 
         mac_layer_1 {
@@ -160,7 +176,7 @@
 &trans        &trans        &trans            &trans             &trans        &trans    &mt DELETE DELETE  &mt LC(ENTER) LC(ENTER)                                                              &trans
             >;
 
-            sensor-bindings = <&scroll_right_left>;
+            sensor-bindings = <&scroll_right_left_mac>;
         };
 
         mac_layer_2 {
@@ -171,7 +187,7 @@
 &trans           &trans       &trans             &trans      &trans       &trans    &kp LG(V)  &mt LA(ENTER) LA(ENTER)                                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down_mac>;
         };
 
         mac_layer_3 {
