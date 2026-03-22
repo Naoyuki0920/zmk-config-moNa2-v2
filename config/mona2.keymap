@@ -102,8 +102,35 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-
             ignored-key-positions = <2 38>;
+        };
+
+        alt_tab_swapper: alt_tab_swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <38>;
+        };
+
+        alt_shift_tab_swapper: alt_shift_tab_swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
+            ignored-key-positions = <38>;
+        };
+
+        cmd_tab_swapper: cmd_tab_swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <38>;
+        };
+
+        cmd_shift_tab_swapper: cmd_shift_tab_swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp LS(TAB)>, <&kt LGUI>;
+            ignored-key-positions = <38>;
         };
     };
 
@@ -146,7 +173,7 @@
         win_layer_3 {
             bindings = <
 &kp LC(LA(DELETE))  &kp LC(W)  &kp LC(LS(TAB))         &ctrl_tab_swapper        &kp LC(T)                             &none   &none                      &mt UP_ARROW UP_ARROW      &none                        &none
-&none               &none      &kp LA(LS(TAB))         &kp LA(TAB)              &none                         &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
+&none               &none      &alt_shift_tab_swapper  &alt_tab_swapper         &none                         &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
 &none               &none      &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &none      &kp PRINTSCREEN    &none   &none   &none                      &none                      &none                        &none
 &trans              &trans     &trans                  &trans                   &trans     &trans             &trans  &trans                                                                                     &trans
             >;
@@ -190,7 +217,7 @@
         mac_layer_3 {
             bindings = <
 &none   &kp LG(W)  &kp LC(LS(TAB))  &ctrl_tab_swapper  &kp LG(T)                                  &none   &none                      &mt UP_ARROW UP_ARROW      &none                        &none
-&none   &none      &kp LG(LS(TAB))  &kp LG(TAB)        &none                              &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
+&none   &none      &cmd_shift_tab_swapper  &cmd_tab_swapper  &none                              &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
 &none   &none      &none            &none              &none      &kp LG(LS(NUMBER_4))    &none   &none   &none                      &none                      &none                        &none
 &trans  &trans     &trans           &trans             &trans     &trans                  &trans  &trans                                                                                     &trans
             >;
