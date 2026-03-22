@@ -63,6 +63,7 @@
             bindings = <&bt BT_SEL 4 &to 0>;
             label = "BT_SEL_4_WIN";
         };
+
     };
 
     behaviors {
@@ -100,7 +101,6 @@
 
         ctrl_tab_swapper: ctrl_tab_swapper {
             compatible = "zmk,behavior-tri-state";
-            label = "CTRL_TAB_SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
             ignored-key-positions = <2 38>;

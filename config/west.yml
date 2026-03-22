@@ -11,9 +11,11 @@ manifest:
     # - name: sekigon-gonnoc  # <-- PAW3222
     #   url-base: https://github.com/sekigon-gonnoc
     - name: caksoylar  # <-- RGB LED
-      url-base: https://github.com/caksoylar  
+      url-base: https://github.com/caksoylar
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
+    - name: dhruvinsh  # <-- Tri-State (Swapper)
+      url-base: https://github.com/dhruvinsh
   projects:
     # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork
     - name: zmk
@@ -50,6 +52,9 @@ manifest:
       revision: 6d8e399
     - name: zmk-input-processor-keybind
       remote: zettaface
+      revision: main
+    - name: zmk-tri-state
+      remote: dhruvinsh
       revision: main
   self:
     path: config
