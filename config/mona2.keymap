@@ -63,7 +63,6 @@
             bindings = <&bt BT_SEL 4 &to 0>;
             label = "BT_SEL_4_WIN";
         };
-
     };
 
     behaviors {
@@ -103,6 +102,7 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+
             ignored-key-positions = <2 38>;
         };
     };
@@ -145,10 +145,10 @@
 
         win_layer_3 {
             bindings = <
-&kp LC(LA(DELETE))  &kp LC(W)           &kp LC(LS(TAB))         &ctrl_tab_swapper        &kp LC(T)                                           &none   &none                      &mt UP_ARROW UP_ARROW      &none                        &none
-&none               &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)     &kp LC(LG(LEFT_ARROW))   &kp LC(LG(RIGHT_ARROW))                     &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
-&none               &none               &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &none                    &kp PRINTSCREEN    &none   &none   &none                      &none                      &none                        &none
-&trans              &trans              &trans                  &trans                   &trans                   &trans             &trans  &trans                                                                                     &trans
+&kp LC(LA(DELETE))  &kp LC(W)  &kp LC(LS(TAB))         &ctrl_tab_swapper        &kp LC(T)                             &none   &none                      &mt UP_ARROW UP_ARROW      &none                        &none
+&none               &none      &kp LA(LS(TAB))         &kp LA(TAB)              &none                         &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
+&none               &none      &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &none      &kp PRINTSCREEN    &none   &none   &none                      &none                      &none                        &none
+&trans              &trans     &trans                  &trans                   &trans     &trans             &trans  &trans                                                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -190,9 +190,9 @@
         mac_layer_3 {
             bindings = <
 &none   &kp LG(W)  &kp LC(LS(TAB))  &ctrl_tab_swapper  &kp LG(T)                                  &none   &none                      &mt UP_ARROW UP_ARROW      &none                        &none
-&none   &none      &none            &none        &none                              &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
-&none   &none      &none            &none        &none      &kp LG(LS(NUMBER_4))    &none   &none   &none                      &none                      &none                        &none
-&trans  &trans     &trans           &trans       &trans     &trans                  &trans  &trans                                                                                     &trans
+&none   &none      &kp LG(LS(TAB))  &kp LG(TAB)        &none                              &none   &none   &mt LEFT_ARROW LEFT_ARROW  &mt DOWN_ARROW DOWN_ARROW  &mt RIGHT_ARROW RIGHT_ARROW  &none
+&none   &none      &none            &none              &none      &kp LG(LS(NUMBER_4))    &none   &none   &none                      &none                      &none                        &none
+&trans  &trans     &trans           &trans             &trans     &trans                  &trans  &trans                                                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
