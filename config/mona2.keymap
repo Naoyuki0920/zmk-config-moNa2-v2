@@ -116,28 +116,28 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-            ignored-key-positions = <38>;
+            ignored-key-positions = <38 12>;
         };
 
         alt_shift_tab_swapper: alt_shift_tab_swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
-            ignored-key-positions = <38>;
+            ignored-key-positions = <38 13>;
         };
 
         cmd_tab_swapper: cmd_tab_swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <38>;
+            ignored-key-positions = <38 12>;
         };
 
         cmd_shift_tab_swapper: cmd_shift_tab_swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp LS(TAB)>, <&kt LGUI>;
-            ignored-key-positions = <38>;
+            ignored-key-positions = <38 13>;
         };
     };
 
