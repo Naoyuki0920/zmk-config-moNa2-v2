@@ -138,7 +138,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             flavor = "balanced";
-            bindings = <&lt_alt_win>, <&kp ENTER>;
+            bindings = <&lt_alt_win &kp ENTER>;
         };
 
         enter_alt_mac: enter_alt_mac {
@@ -147,7 +147,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             flavor = "balanced";
-            bindings = <&lt_alt_mac>, <&kp ENTER>;
+            bindings = <&lt_alt_mac &kp ENTER>;
         };
     };
 
