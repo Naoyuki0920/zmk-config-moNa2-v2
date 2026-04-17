@@ -131,6 +131,24 @@
 
             tap-ms = <20>;
         };
+
+        enter_alt_win: enter_alt_win {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+            flavor = "balanced";
+            bindings = <&lt_alt_win>, <&kp ENTER>;
+        };
+
+        enter_alt_mac: enter_alt_mac {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+            flavor = "balanced";
+            bindings = <&lt_alt_mac>, <&kp ENTER>;
+        };
     };
 
     keymap {
@@ -141,7 +159,7 @@
 &kp Q                          &kp W                  &kp E                  &kp R        &kp T                                                &kp Y            &kp U  &kp I      &kp O    &kp P
 &kp A                          &kp S                  &kp D                  &kp F        &kp G                       &kp ESCAPE               &kp H            &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LSHIFT Z                   &kp X                  &kp C                  &kp V        &kp B        &kp TAB        &kp F7                   &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT LEFT_ALT  &lt 1 LANG1  &lt 2 LANG2  &lt 3 SPACE    &mt BACKSPACE BACKSPACE  &mt ENTER ENTER                             &lt_alt_win
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT LEFT_ALT  &lt 1 LANG1  &lt 2 LANG2  &lt 3 SPACE    &mt BACKSPACE BACKSPACE  &enter_alt_win                             &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -185,7 +203,7 @@
 &trans                         &trans                 &trans                         &trans       &trans                              &trans  &trans  &trans  &trans  &trans
 &trans                         &trans                 &trans                         &trans       &trans                      &trans  &trans  &trans  &trans  &trans  &trans
 &trans                         &trans                 &trans                         &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_ALT LEFT_ALT  &mt LEFT_COMMAND LEFT_COMMAND  &lt 5 LANG1  &lt 6 LANG2  &lt 7 SPACE    &trans  &trans                          &lt_alt_mac
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_ALT LEFT_ALT  &mt LEFT_COMMAND LEFT_COMMAND  &lt 5 LANG1  &lt 6 LANG2  &lt 7 SPACE    &trans  &enter_alt_mac                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down_mac>;
