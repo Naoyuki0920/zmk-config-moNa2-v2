@@ -132,23 +132,6 @@
             tap-ms = <20>;
         };
 
-        enter_alt_win: enter_alt_win {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <300>;
-            flavor = "balanced";
-            bindings = <&lt_alt_win &kp>;
-        };
-
-        enter_alt_mac: enter_alt_mac {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <300>;
-            flavor = "balanced";
-            bindings = <&lt_alt_mac &kp>;
-        };
     };
 
     keymap {
@@ -159,7 +142,7 @@
 &kp Q                          &kp W                  &kp E                  &kp R        &kp T                                                &kp Y            &kp U  &kp I      &kp O    &kp P
 &kp A                          &kp S                  &kp D                  &kp F        &kp G                       &kp ESCAPE               &kp H            &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LSHIFT Z                   &kp X                  &kp C                  &kp V        &kp B        &kp TAB        &kp F7                   &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT LEFT_ALT  &lt 1 LANG1  &lt 2 LANG2  &lt 3 SPACE    &mt BACKSPACE BACKSPACE  &enter_alt_win ENTER                             &kp RIGHT_SHIFT
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT LEFT_ALT  &lt 1 LANG1  &lt 2 LANG2  &lt 3 SPACE    &mt BACKSPACE BACKSPACE  &lt 8 ENTER                             &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -203,7 +186,7 @@
 &trans                         &trans                 &trans                         &trans       &trans                              &trans  &trans  &trans  &trans  &trans
 &trans                         &trans                 &trans                         &trans       &trans                      &trans  &trans  &trans  &trans  &trans  &trans
 &trans                         &trans                 &trans                         &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_ALT LEFT_ALT  &mt LEFT_COMMAND LEFT_COMMAND  &lt 5 LANG1  &lt 6 LANG2  &lt 7 SPACE    &trans  &enter_alt_mac ENTER                          &trans
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_ALT LEFT_ALT  &mt LEFT_COMMAND LEFT_COMMAND  &lt 5 LANG1  &lt 6 LANG2  &lt 7 SPACE    &trans  &lt 9 ENTER                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down_mac>;
@@ -244,10 +227,10 @@
 
         win_layer_alt {
             bindings = <
-&trans  &trans  &kp LS(TAB)  &kp TAB  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans   &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans   &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans        &trans  &trans    &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -255,10 +238,10 @@
 
         mac_layer_alt {
             bindings = <
-&trans  &trans  &kp LS(TAB)  &kp TAB  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans   &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans   &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &kp LG(LS(TAB))  &kp LG(TAB)  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans        &trans  &trans    &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
