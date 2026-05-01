@@ -62,6 +62,11 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+        // ZMKがACTIVE状態の間センサーをRUNモードに強制維持し、
+        // アイドル後の初動ラグを防ぐ
+        force-awake;
+        // force-awake有効時に4msサンプリングを強制（デフォルト8ms）
+        force-awake-4ms-mode;
     };
 };
 
